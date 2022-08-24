@@ -33,7 +33,7 @@ class Quote extends Equatable {
     return <String, dynamic>{
       'author': author,
       'id': id,
-      'content': content,
+      'quote': content,
       'permalLink': permalLink,
     };
   }
@@ -42,7 +42,7 @@ class Quote extends Equatable {
     return Quote(
       author: map['author'] as String,
       id: map['id'] as int,
-      content: map['content'] as String,
+      content: map['qoute'] as String,
       permalLink: map['permalLink'] as String,
     );
   }
