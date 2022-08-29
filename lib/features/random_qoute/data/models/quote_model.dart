@@ -7,14 +7,14 @@ class QuoteModel extends Quote {
       {required String author,
       required int id,
       required String content,
-      required String permalLink})
-      : super(author: author, id: id, content: content, permalLink: permalLink);
+      required String permalink})
+      : super(author: author, id: id, content: content, permalink: permalink);
   factory QuoteModel.fromMap(Map<String, dynamic> map) {
     return QuoteModel(
       author: map['author'] as String,
       id: map['id'] as int,
-      content: map['qoute'] as String,
-      permalLink: map['permalLink'] as String,
+      content: map['quote'] as String,
+      permalink: map['permalink'] as String,
     );
   }
   factory QuoteModel.fromJson(String source) =>
@@ -24,7 +24,7 @@ class QuoteModel extends Quote {
       'author': author,
       'id': id,
       'quote': content,
-      'permalLink': permalLink,
+      'permalink': permalink,
     };
   }
 

@@ -9,6 +9,7 @@ class GetRandomQuote implements UseCase<Quote, NoParams> {
 
   GetRandomQuote({required this.quoteRepository});
   @override
-  Future<Either<Failure, Quote>> call(NoParams params) =>
-      quoteRepository.getRandomQoute();
+  Future<Either<Failure, Quote>> call(NoParams params) {
+    return quoteRepository.getRandomQoute();
+  }
 }

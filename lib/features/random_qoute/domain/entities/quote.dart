@@ -7,25 +7,25 @@ class Quote extends Equatable {
   final String author;
   final int id;
   final String content;
-  final String permalLink;
+  final String permalink;
   const Quote({
     required this.author,
     required this.id,
     required this.content,
-    required this.permalLink,
+    required this.permalink,
   });
 
   Quote copyWith({
     String? author,
     int? id,
     String? content,
-    String? permalLink,
+    String? permalink,
   }) {
     return Quote(
       author: author ?? this.author,
       id: id ?? this.id,
       content: content ?? this.content,
-      permalLink: permalLink ?? this.permalLink,
+      permalink: permalink ?? this.permalink,
     );
   }
 
@@ -34,7 +34,7 @@ class Quote extends Equatable {
       'author': author,
       'id': id,
       'quote': content,
-      'permalLink': permalLink,
+      'permalink': permalink,
     };
   }
 
@@ -42,8 +42,8 @@ class Quote extends Equatable {
     return Quote(
       author: map['author'] as String,
       id: map['id'] as int,
-      content: map['qoute'] as String,
-      permalLink: map['permalLink'] as String,
+      content: map['quote'] as String,
+      permalink: map['permalink'] as String,
     );
   }
 
@@ -56,5 +56,5 @@ class Quote extends Equatable {
   bool get stringify => true;
 
   @override
-  List<Object> get props => [author, id, content, permalLink];
+  List<Object> get props => [author, id, content, permalink];
 }

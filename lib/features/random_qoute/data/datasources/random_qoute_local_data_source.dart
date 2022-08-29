@@ -13,9 +13,8 @@ class RandomQouteLocalDataSourceImpl extends RandomQouteLocalDataSource {
 
   RandomQouteLocalDataSourceImpl({required this.sharedPreferences});
   @override
-  Future<void> cacheQoute(QuoteModel qoute) {
-    // TODO: implement cacheQoute
-    throw UnimplementedError();
+  Future<void> cacheQoute(QuoteModel qoute) async {
+    sharedPreferences.setString(AppStrings.cachedRandomQoute, qoute.toJson());
   }
 
   @override
